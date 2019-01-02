@@ -1,60 +1,45 @@
 <!doctype html>
 
-<html lang="es" style="height: 100%; width: 100%;">
-<head>
-    <meta charset="utf-8">
+<html lang="es" class="PantallaCompleta">
+    <head>
+        <meta charset="utf-8">
 
-    <title>Mi Cuenta Digi</title>
-    <meta name="description" content="Acceso a Mi Cuenta Digi">
-    <meta name="author" content="Basura">
+        <title>Mi Cuenta Digi</title>
+        <meta name="description" content="Acceso a Mi Cuenta Digi">
+        <meta name="author" content="Basura">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="theme-color" content="#14171b">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="theme-color" content="#14171b">
 
-    <link rel="shortcut icon" href="assets/icons/digi.ico">
-    <link rel="manifest" href="manifest.json">
-    
-    <!-- Add to home screen for Safari on iOS -->
-    <link rel="apple-touch-icon" href="assets/icons/ios-180x180.png">
-
-    <meta name="apple-mobile-web-app-title" content="Mi Cuenta Digi">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <!------------------------------------------->
-
-
-   <!-- <link rel="stylesheet" href="css/styles.css?v=1.0"> -->
- 
-</head>
-
-<body style="margin: 0px; height: 100%; width: 100%;">
-
-    <iframe src="https://micuentadigi.digimobil.es/es"
-            width="100%" height="100%" marginheight="0" align="top"  
-            frameborder="0" hspace="0" vspace="0">
-
-        Lo siento el mobil, tableta u ordenador no es compatible.
-
-    </iframe>
-
-  <!--  <script src="js/scripts.js"></script>  -->
-
-    <script type="text/javascript">
-      function servWorker(){
-          // Set up service worker
-          if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('service-worker.js', {scope: '.'});
-          }
-          // Easter Egg to get it full black
-          // Awesome for OLED screens
-          if (localStorage.getItem('isDeepBlack')) {
-            document.body.classList.add('deepblack');
-          }        
-      } 
- 
-      window.onload = servWorker();  
+        <link rel="shortcut icon" href="assets/icons/digi.ico">
+        <link rel="manifest" href="manifest.json">
         
-    </script>
-</body>
+        <!-- Add to home screen for Safari on iOS -->
+        <link rel="apple-touch-icon" href="assets/icons/ios-180x180.png">
+
+        <meta name="apple-mobile-web-app-title" content="Mi Cuenta Digi">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <!------------------------------------------->
+
+        <link rel="stylesheet" href="css/styles.css?v=1.0">
+        <script src="js/scripts.js"></script>    
+        <script type="text/javascript"> 
+          window.onload = servWorker();        
+        </script>
+
+     
+    </head>
+
+    <body class="PantallaCompleta">
+
+        <iframe class="PantallaCompleta" src="https://micuentadigi.digimobil.es/es"
+                marginheight="0" align="top" frameborder="0" hspace="0" vspace="0">
+
+            Lo siento, el mobil, tableta u ordenador no es compatible.
+
+        </iframe>       
+
+    </body>
 </html>
