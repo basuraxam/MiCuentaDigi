@@ -29,13 +29,11 @@
 
     <body class="PantallaCompleta">
 
-        <object class="PantallaCompleta" data="https://micuentadigi.digimobil.es/">
-
+        <object id="idMiCuentaDigi" class="PantallaCompleta" data="https://micuentadigi.digimobil.es/">
             Lo siento, el mobil, tableta u ordenador no es compatible.
+        </object>      
 
-        </object>       
-
-     <!--   <script src="js/scripts.js"></script>  -->    
+        <script src="js/scripts.js"></script>    
         <script type="text/javascript"> 
 
           function servWorker(){
@@ -50,7 +48,13 @@
               }        
           }
  
-          window.onload = servWorker();  
+          function Inicio(){  
+            pruebacolor();
+            servWorker();
+          }
+
+          window.onload = Inicio();
+            
 
         </script>
 
